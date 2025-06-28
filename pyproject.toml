@@ -10,10 +10,6 @@ python = "^3.12"
 fastapi = "^0.115.13"
 uvicorn = "^0.35.0"
 
-[tool.poetry.scripts]
-start = "uvicorn svadebnoe.app.main:app --host 0.0.0.0 --port 8000"
-
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
