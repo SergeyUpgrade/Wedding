@@ -1,0 +1,78 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background: url('/static/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.invitation-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #8b4513;
+}
+
+.couple-names {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.bride {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+.groom {
+    color: #4682b4;
+    font-weight: bold;
+}
+
+.and {
+    margin: 0 15px;
+    color: #333;
+}
+
+.message {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.details {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.rsvp {
+    margin-top: 20px;
+}
+
+.rsvp-button {
+    display: inline-block;
+    background-color: #d4af37;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.rsvp-button:hover {
+    background-color: #b38f2a;
+}

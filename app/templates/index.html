@@ -1,0 +1,30 @@
+!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу {{ bride }} и {{ groom }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="invitation-container">
+        <h1>Приглашение на свадьбу</h1>
+        <div class="couple-names">
+            <span class="bride">{{ bride }}</span>
+            <span class="and">&</span>
+            <span class="groom">{{ groom }}</span>
+        </div>
+        <div class="message">{{ message }}</div>
+        <div class="details">
+            <p><strong>Дата:</strong> {{ date }}</p>
+            <p><strong>Время:</strong> {{ time }}</p>
+            <p><strong>Место:</strong> {{ location }}</p>
+            <p><strong>Адрес:</strong> {{ address }}</p>
+        </div>
+        <div class="rsvp">
+            <p>Пожалуйста, подтвердите ваше присутствие до 1 августа</p>
+            <a href="tel:+79161234567" class="rsvp-button">Подтвердить</a>
+        </div>
+    </div>
+</body>
+</html>
