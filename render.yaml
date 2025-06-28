@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: wedding-poetry
+    name: svadebnoe-app
     runtime: python
     buildCommand: |
-      python -m pip install --upgrade pip
       pip install poetry
-      poetry install --no-root --no-dev
+      poetry install --no-dev
     startCommand: |
-      poetry run python -m uvicorn app.main:app --host 0.0.0.0 --port 10000
+      poetry run start
