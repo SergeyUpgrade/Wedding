@@ -5,6 +5,9 @@ from fastapi.responses import HTMLResponse
 from pathlib import Path
 
 app = FastAPI(title="Свадебное приглашение")
+# Загружаем HTML как строку (Vercel не поддерживает Jinja2 из коробки)
+html_path = Path(__file__).parent / "templates" / "index.html"
+html_content = html_path.read_text(encoding="utf-8")
 
 # Настройка путей
 BASE_DIR = Path(__file__).parent
