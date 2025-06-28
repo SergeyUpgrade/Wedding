@@ -1,14 +1,13 @@
 services:
   - type: web
-    name: wedding-invitation  # или ваше название сервиса
+    name: wedding-invitation
     runtime: python
-    python:
-      version: "3.12"
     buildCommand: |
       pip install poetry
-      poetry install --no-dev
+      if [ -f "poetry.lock" ]; then
+        poetry install --no-dev
+      else
+        poetry add fastapi uvicorn --no-dev
+      fi
     startCommand: |
       poetry run uvicorn app.main:app --host 0.0.0.0 --port 10000
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.9.16
