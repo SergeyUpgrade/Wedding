@@ -1,13 +1,10 @@
 services:
   - type: web
-    name: wedding-invitation
+    name: wedding-poetry
     runtime: python
     buildCommand: |
+      python -m pip install --upgrade pip
       pip install poetry
-      if [ -f "poetry.lock" ]; then
-        poetry install --no-dev
-      else
-        poetry add fastapi uvicorn --no-dev
-      fi
+      poetry install --no-root --no-dev
     startCommand: |
-      poetry run uvicorn app.main:app --host 0.0.0.0 --port 10000
+      poetry run python -m uvicorn app.main:app --host 0.0.0.0 --port 10000
